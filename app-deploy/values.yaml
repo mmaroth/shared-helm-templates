@@ -4,7 +4,7 @@ envName: dev
 replicaCount: 1
 
 image:
-  registry: REGISTRY_HOST:443/gitea/giteaadmin/
+  registry: REGISTRY_HOST:443/gitea/giteaadmin
   tag: 0.0.0
 
 

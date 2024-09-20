@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.registry }}:{{ .Values.image.tag }}"
+          image: "{{ .Values.image.registry }}/{{ .Values.appName }}:{{ .Values.image.tag }}"
           ports:
           - containerPort: 8080
