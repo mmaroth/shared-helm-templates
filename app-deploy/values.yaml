@@ -1,11 +1,10 @@
-appName: ${{values.name}}
+appName: demoapp
 envName: dev
-namespace: ${{values.name}}
 
 replicaCount: 1
 
 image:
-  repository: ${{values.repoHost}}:443/gitea/giteaadmin/${{values.name}}
+  registry: REGISTRY_HOST:443/gitea/giteaadmin/
   tag: 0.0.0
 
 
@@ -15,4 +14,4 @@ service:
 
 ingress:
   enable: false
-  host: ${{values.repoHost}}
+  host: INGRESS_HOST

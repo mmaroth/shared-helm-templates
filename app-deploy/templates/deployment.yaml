@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Values.appName }}
-  namespace: "{{ .Values.namespace }}-{{ .Values.envName }}"
+  namespace: "{{ .Values.appName }}-{{ .Values.envName }}"
   labels:
     entity-id: {{ .Values.appName }}
     app: {{ .Values.appName }}
@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
         - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: "{{ .Values.image.registry }}:{{ .Values.image.tag }}"
           ports:
           - containerPort: 8080
