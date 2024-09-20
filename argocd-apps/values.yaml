@@ -1,0 +1,13 @@
+serviceName: demo-app01
+project: default
+namespace: argocd
+
+# envList:
+#   dev:
+#     repo: dev
+#     path: "abc"
+#     namespace: demo-app01-dev
+#   test:
+#     repo: test
+#     path: "abc"
+#     namespace: demo-app01-test

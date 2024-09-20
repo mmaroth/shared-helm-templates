@@ -1,0 +1,18 @@
+appName: ${{values.name}}
+envName: dev
+namespace: ${{values.name}}
+
+replicaCount: 1
+
+image:
+  repository: ${{values.repoHost}}:443/gitea/giteaadmin/${{values.name}}
+  tag: 0.0.0
+
+
+service:
+  type: ClusterIP
+  port: 8080
+
+ingress:
+  enable: false
+  host: ${{values.repoHost}}
